@@ -1,0 +1,31 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+<div>
+  <div class="divWidth" id="test">
+
+  </div>
+</div>
+</body>
+
+<script>
+    const displayTime = () => {
+      let dateTime = new Date();
+      let hours = dateTime.getHours();
+      let minutes = dateTime.getMinutes();
+      let second = dateTime.getSeconds();
+      let div = document.getElementById('test')
+      if(hours>12){
+       hours = hours-12
+      }
+      let dateWithTime = `${hours}: ${minutes}: ${second}`
+      document.getElementById('test').innerHTML = dateWithTime
+    }
+
+    setInterval(displayTime,10)
+</script>
+</html>

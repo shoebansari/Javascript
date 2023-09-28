@@ -1,0 +1,36 @@
+<html>
+
+<head>
+
+<style>
+  .divWidth{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+  }
+</style>
+</head>
+
+<body>
+<div>
+  <div class="divWidth" id="test"></div>
+  <div>
+    <button id="submitButton">Submit</button>
+  </div>
+</div>
+</body>
+<script>
+  // How to make call on DOM 
+  // document.getElementById('submitButton').onclick=testFun;
+  function testFun(){
+    document.getElementById('test').style.background='green'
+  }
+
+    //How to make call on Using addEventListner, you can write all event to this.
+    document.getElementById('submitButton').addEventListener('click',()=>document.getElementById('test').style.background='green')
+    //OR
+    document.getElementById('submitButton').addEventListener('click',()=>testFun())
+    document.getElementById('test').addEventListener('mouseover',()=>document.getElementById('test').style.background='yellow')
+    document.getElementById('test').addEventListener('mouseout',()=>document.getElementById('test').style.background='black')
+</script>
+</html>

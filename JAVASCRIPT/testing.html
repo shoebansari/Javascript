@@ -1,0 +1,31 @@
+<html>
+
+<head>
+  <script>
+    const test = (arm) => {
+
+      let armOut = 0
+      let splitNo = arm.split('');
+      console.log(splitNo)
+      for (let i = 0; i < splitNo.length; i++) {
+        armOut = armOut + splitNo[i] * splitNo[i] * splitNo[i]
+        console.log('armOut11', armOut)
+      }
+      console.log('armOut', armOut)
+      if (arm == armOut) {
+        console.log('This is armStrong Number')
+      }
+      else {
+        console.log('Not ArmStrong No')
+      }
+    }
+
+    test('1634')
+  </script>
+</head>
+
+<body>
+  <h1>HEADING</h1>
+</body>
+
+</html>
